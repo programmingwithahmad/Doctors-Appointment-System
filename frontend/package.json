@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://doctors-appointment-system-seven.vercel.app",
+  "proxy": "https://doctors-appointment-system-la2ij3wqr.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
