@@ -19,7 +19,7 @@ const BookingPage = () => {
   const getUserData = async () => {
     try {
       const res = await axios.post(
-        "/api/v1/doctor/getDoctorById",
+        `${import.meta.env.VITE_REACT_APP_API}/api/v1/doctor/getDoctorById`,
         { doctorId: params.doctorId },
         {
           headers: {
@@ -39,7 +39,7 @@ const BookingPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/user/booking-availbility",
+        `${import.meta.env.VITE_REACT_APP_API}/api/v1/user/booking-availbility`,
         { doctorId: params.doctorId, date, time },
         {
           headers: {
@@ -69,7 +69,7 @@ const BookingPage = () => {
       }
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/user/book-appointment",
+        `${import.meta.env.VITE_REACT_APP_API}/api/v1/user/book-appointment`,
         {
           doctorId: params.doctorId,
           userId: user._id,

@@ -15,7 +15,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/user/get-all-notification",
+        `${import.meta.env.VITE_REACT_APP_API}/api/v1/user/get-all-notification`,
         {
           userId: user._id,
         },
@@ -43,7 +43,7 @@ const NotificationPage = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/user/delete-all-notification",
+        `${import.meta.env.VITE_REACT_APP_API}/api/v1/user/delete-all-notification`,
         { userId: user._id },
         {
           headers: {
