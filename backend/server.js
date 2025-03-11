@@ -1,9 +1,13 @@
 const express = require("express");
 const colors = require("colors");
-const moragan = require("morgan");
+const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const path = require("path");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+
 
 //dotenv conig
 dotenv.config();
