@@ -15,8 +15,11 @@ connectDB();
 const app = express();
 
 //middlewares
+app.use(cors())
 app.use(express.json());
-app.use(moragan("dev"));
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+
 
 //routes
 app.use("/api/v1/user", require("./routes/userRoutes"));
